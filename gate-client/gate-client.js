@@ -17,7 +17,7 @@ module.exports = function(RED) {
         client.on('connect', function(connection) {
             connection.on('message', function(message) {
                 if (message.type === 'utf8') {
-                    node.send({payload: Json.parse(message.utf8Data)})
+                    node.send({payload: JSON.parse(message.utf8Data)})
                 }
             })
         
