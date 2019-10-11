@@ -5,7 +5,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config)
         const node = this;
 
-        this.sound = Boolean(config.sound || false)
+        this.sound = config.sound
         
         this.on('input', function(msg) {
             const redVal = msg.payload.red ? msg.payload.red : 0
