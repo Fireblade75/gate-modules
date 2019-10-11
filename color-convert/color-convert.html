@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    RED.nodes.registerType('color-convert',{
+        category: 'function',
+        color: '#ff6c37',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"color-convert";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="gate-client">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-color"><i class="fa fa-palette"></i> Color</label>
+        <input type="text" id="node-input-color" placeholder="false" style="width:70%;">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gate-client">
+    <p>A node for converting color labels to rgb values</p>
+</script>
