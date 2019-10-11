@@ -26,7 +26,7 @@ module.exports = function(RED) {
                 connection.sendUTF(JSON.stringify({
                     "request": "subscribe",
                     "event_types": ["rf_alarm", "rfid_alarm", "ir_direction"],
-                    "include_events_since": include_events_since
+                    "include_events_since": this.include_events_since
                 }))
             }
         })
