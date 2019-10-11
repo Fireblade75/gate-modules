@@ -14,7 +14,7 @@ module.exports = function(RED) {
 
             node.log(blueVal)
 
-            fetch('192.168.1.101/api/v2/blink',
+            fetch('http://192.168.1.101/api/v2/blink',
                 {
                     method: 'POST', 
                     headers: { 'Content-Type': 'application/json' },
