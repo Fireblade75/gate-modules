@@ -6,10 +6,11 @@ module.exports = function(RED) {
         const node = this;
     
         const client = new WebSocketClient()
-
         
         client.connect('ws://192.168.1.101:80/api/v2/events')
         
+        this.include_events_since = String(config.include_events_since || "2015-01-23T23:50:27Z")
+
         client.on('connectFailed', function(error) {
             node.error(error.toString())
         })
