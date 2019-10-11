@@ -9,7 +9,7 @@ module.exports = function(RED) {
         
         client.connect('ws://192.168.1.101:80/api/v2/events')
         
-        this.include_events_since = String(config.include_events_since || "2015-01-23T23:50:27Z")
+        this.include_events_since = String(config.include_events_since || "now")
 
         client.on('connectFailed', function(error) {
             node.error(error.toString())
@@ -26,7 +26,7 @@ module.exports = function(RED) {
                 connection.sendUTF(JSON.stringify({
                     "request": "subscribe",
                     "event_types": ["rf_alarm", "rfid_alarm", "ir_direction"],
-                    "include_events_since": "2015-01-23T23:50:27Z"
+                    "include_events_since": include_events_since
                 }))
             }
         })
