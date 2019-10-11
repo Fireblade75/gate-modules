@@ -4,7 +4,8 @@ module.exports = function(RED) {
         const node = this;
         
         this.on('input', function(msg) {
-            const color = (msg.payload.color || 'none').toLowerCase()
+            const color = (String(msg.payload.color)).toLowerCase() 
+            node.log(color)
             switch(color) {
                 case 'red': 
                     node.send({payload: {
