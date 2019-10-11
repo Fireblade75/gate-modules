@@ -19,7 +19,7 @@ module.exports = function(RED) {
                     body: JSON.stringify({
                         "units": [1, 2],
                         "groups": ["A"],
-                        "sound": node.sound,
+                        "sound": node.sound === 'on',
                         "light": true,
                         "count": 3,
                         "color": {
