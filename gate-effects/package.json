@@ -1,5 +1,5 @@
 {
-    "name": "gate-effects",
+    "name": "node-red-contrib-gate-effects",
     "version": "1.0.0",
     "description": "",
     "main": "gate-effects.js",
