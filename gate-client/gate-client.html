@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('gate-client',{
+        category: 'function',
+        color: '#ff6c37',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"gate-client";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="gate-client">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gate-client">
+    <p>A node that subscribes to events from a NEDAP security gate</p>
+</script>
