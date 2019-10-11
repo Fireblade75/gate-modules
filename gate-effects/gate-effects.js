@@ -12,7 +12,9 @@ module.exports = function(RED) {
             const greenVal = msg.payload.green ? msg.payload.green : 0
             const blueVal = msg.payload.blue ? msg.payload.blue : 0
 
-            fetch('192.168.1.101/api/v2/blink',
+            node.log(blueVal)
+
+            fetch('http://192.168.1.101/api/v2/blink',
                 {
                     method: 'POST', 
                     headers: { 'Content-Type': 'application/json' },
