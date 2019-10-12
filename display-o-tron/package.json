@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "jvsdisplayotron": "^1.1.0"
-  }
+  },
+  "node-red" : {
+    "nodes": {
+        "display-o-tron": "display-o-tron.js"
+    }
+}
 }
